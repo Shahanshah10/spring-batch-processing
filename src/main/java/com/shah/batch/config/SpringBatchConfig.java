@@ -48,7 +48,7 @@ public class SpringBatchConfig {
 
     private LineMapper<Customer> lineMapper() {
         var lineMapper=new DefaultLineMapper<Customer>();
-        DelimitedLineTokenizer lineTokenizer =new DelimitedLineTokenizer();
+        var lineTokenizer =new DelimitedLineTokenizer();
         lineTokenizer.setDelimiter(",");
         lineTokenizer.setStrict(false);
         lineTokenizer.setNames("id","firstName","lastName","email","gender","contactNo","country","dob");
